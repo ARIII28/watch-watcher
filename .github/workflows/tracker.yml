@@ -31,9 +31,9 @@ jobs:
 
       # Install ChromeDriver
       - name: Set up ChromeDriver
-        uses: actions/setup-chromedriver@v2
+        uses: browser-actions/setup-chromedriver@v2
         with:
-          chrome-version: 'latest'  # Ensures compatibility with the browser version
+          chrome-version: 'latest'
 
       # Run the script
       - name: Run Price Tracker
