@@ -1,5 +1,4 @@
 import csv
-import time
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -9,75 +8,61 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from fake_useragent import UserAgent
 from webdriver_manager.chrome import ChromeDriverManager
-   
-   
-# here the product i've wanted to track or its webpage
+
+# Constants
 product_url = "https://www.myntra.com/watches/casio/casio-men-g-shock-ga-2100-1a1dr-black-analog-digital-dial-black-resin-strap-watch-g987/10761810/buy"
-price_threshold = 6500 #  so here the Price limit set to ₹6500 for the product
+price_threshold = 6500  # Set the price limit
 csv_file = "myntra.csv"
-chrome_driver = ChromeDriverManager().install() # Location for ChromeDriver in GitHub Actions
-  # Download ChromeDriver; if you are using Brave, specify the binary path for the WebDriver
 
-
-# set Chrome options and set a dynamic user-agent to mimic real user behavior
-
+# Set up Chrome options
 options = Options()
 ua = UserAgent()
-options.add_argument(f"user-agent={ua.random}") 
-
-options.add_argument("--headless")# entirely optional
+options.add_argument(f"user-agent={ua.random}")
+options.add_argument("--headless")  # Run in headless mode
 options.add_argument("--disable-gpu")
-options.add_argument("--disable-popup-blocking")  # Disable popups
-options.add_argument("--disable-notifications")  # Disable notifications
-options.add_argument("--disable-infobars") 
+options.add_argument("--disable-popup-blocking")
+options.add_argument("--disable-notifications")
+options.add_argument("--disable-infobars")
+options.add_argument("--disable-dev-shm-usage")  # Prevent shared memory issues in containers
 
-# Set up Service
-service = Service(chrome_driver) 
+# Set up ChromeDriver
+service = Service(ChromeDriverManager().install())
 
-# Ensure header is written only if the file is empty (it defines the columns for the scraped data)
+# Ensure the CSV file has a header
 def ensure_header():
-    with open(csv_file, mode="a", newline="", encoding="utf-8") as file:  
-        if file.tell() == 0: # Checking if the file is empty before adding header 
-            csv.writer(file).writerow(["Product Name", "Price", "Date"]) # it adds column headers after confirming file is empty
-
-
+    with open(csv_file, mode="a", newline="", encoding="utf-8") as file:
+        if file.tell() == 0:  # Add header if the file is empty
+            csv.writer(file).writerow(["Product Name", "Price", "Date"])
 
 ensure_header()
 
+# Perform the price check
+driver = webdriver.Chrome(service=service, options=options)
 
-
-
-
-while True: #it creates an infinite loop to track the price
-    driver = webdriver.Chrome(service=service, options=options)  #as we know it initialize the Chrome WebDriver with our specified options
+try:
+    # Open the product page
+    driver.get(product_url)
     
-    try:
-        driver.get(product_url)
-        wait = WebDriverWait(driver, 20)  # Make the driver wait for up to 20 seconds for the page to load
-        product_name = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "h1.pdp-title"))).text #extracted the product name from the webpage and chnaging
-        price = int(wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "strong"))).text.replace("₹", "").replace(",", "").strip()) #we are extracting the price as text and make it int.
-        current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S") 
-
+    # Wait for elements to load and extract data
+    wait = WebDriverWait(driver, 20)
+    product_name = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "h1.pdp-title"))).text
+    price = int(wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "strong"))).text.replace("₹", "").replace(",", "").strip())
+    current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
-        print(f"Extracted: {product_name}, ₹{price}, {current_date}")
-
-        # Check if price is below threshold
-        if price < price_threshold:
-            print(f"Price alert! {product_name} is now ₹{price}.")
-
-        # Write product details to CSV
-        with open(csv_file, "a", newline="", encoding="utf-8") as file:
-            csv.writer(file).writerow([product_name, price, current_date])
-            print(f"Logged to CSV: {product_name}, ₹{price}, {current_date}")
-            
-    except Exception as e:
-        print(f"Error: {e}")
+    print(f"Extracted: {product_name}, ₹{price}, {current_date}")
     
-    finally:
-        # Close the browser
-        driver.quit()
+    # Check if price is below threshold
+    if price < price_threshold:
+        print(f"Price alert! {product_name} is now ₹{price}.")
+    
+    # Write data to the CSV file
+    with open(csv_file, "a", newline="", encoding="utf-8") as file:
+        csv.writer(file).writerow([product_name, price, current_date])
+        print(f"Logged to CSV: {product_name}, ₹{price}, {current_date}")
 
-    # Wait for 86400 seconds (24 hours) before checking again
-    time.sleep(86400)
+except Exception as e:
+    print(f"Error: {e}")
 
-
+finally:
+    # Quit the WebDriver
+    driver.quit()
