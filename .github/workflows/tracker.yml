@@ -29,20 +29,26 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium fake-useragent webdriver-manager
 
-      # Install Google Chrome
-      - name: Install Google Chrome
+      # Install Google Chrome and ChromeDriver
+      - name: Install Google Chrome and ChromeDriver
         run: |
           sudo apt-get update
           sudo apt-get install -y wget unzip
-
-          # Manually download and install Chrome
+          
+          # Install Google Chrome
           CHROME_URL="https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.69/linux64/chrome-linux64.zip"
           wget -q $CHROME_URL -O chrome-linux64.zip
           sudo unzip -o chrome-linux64.zip -d /usr/local/
           rm chrome-linux64.zip
+          
+          # Install ChromeDriver
+          CHROMEDRIVER_URL="https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.69/linux64/chromedriver-linux64.zip"
+          wget -q $CHROMEDRIVER_URL
+          sudo unzip -o chromedriver-linux64.zip -d /usr/local/bin/
+          rm chromedriver-linux64.zip
 
-      # Run Python Script
-      - name: Run Price Tracker Script
+      # Run the script
+      - name: Run Price Tracker
         run: |
           python main.py
 
