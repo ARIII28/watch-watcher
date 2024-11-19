@@ -16,11 +16,6 @@ jobs:
       # Checkout the repository
       - name: Checkout Code
         uses: actions/checkout@v3
-        
-      - name: Set up Docker container with VPN
-        run: |
-          docker run -d --name vpn-container -v $(pwd):/workspace -e VPN_CONFIG=$VPN_CONFIG my-vpn-enabled-docker-image
-          docker exec vpn-container bash -c "cd /workspace && python main.py"
 
       # Set up Python
       - name: Set up Python
@@ -34,34 +29,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium fake-useragent webdriver-manager
 
-      # Install Google Chrome
-      - name: Install Google Chrome
+      # Install Proxy and configure proxychains
+      - name: Install ProxyChains and configure
         run: |
-          sudo apt-get update
-          sudo apt-get install -y wget
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo dpkg -i google-chrome-stable_current_amd64.deb
-          sudo apt-get -f install
+          sudo apt-get install proxychains
+          echo "socks5 127.0.0.1 9050" | sudo tee -a /etc/proxychains.conf
 
-      # Install ChromeDriver
-      - name: Install ChromeDriver
+      # Run the script with Proxy
+      - name: Run Price Tracker with Proxy
         run: |
-          # Get the latest version of ChromeDriver
-          LATEST=$(wget -qO- https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
-          wget https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
-          unzip chromedriver_linux64.zip
-          sudo mv chromedriver /usr/local/bin/chromedriver
-          sudo chmod +x /usr/local/bin/chromedriver
-
-      # Run the script
-      - name: Run Price Tracker
-        run: python main.py
+          proxychains python main.py
 
       # Commit and Push Changes
       - name: Commit and Push Changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "ARIII28"
+          git config --global user.email "aribalan24@gmail.com"
           git add myntra.csv
           git commit -m "Update price data"
           git push
+
