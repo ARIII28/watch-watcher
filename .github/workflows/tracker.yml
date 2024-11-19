@@ -39,13 +39,13 @@ jobs:
           # Manually download and install Chrome
           CHROME_URL="https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.69/linux64/chrome-linux64.zip"
           wget -q $CHROME_URL -O chrome-linux64.zip
-          unzip -o chrome-linux64.zip -d /usr/local/
+          sudo unzip -o chrome-linux64.zip -d /usr/local/
           rm chrome-linux64.zip
           
           # Manually download and install ChromeDriver
           CHROMEDRIVER_URL="https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.69/linux64/chromedriver-linux64.zip"
           wget -q $CHROMEDRIVER_URL
-          unzip -o chromedriver-linux64.zip -d /usr/local/bin/
+          sudo unzip -o chromedriver-linux64.zip -d /usr/local/bin/
           rm chromedriver-linux64.zip
 
       # Run the script using Proxychains
