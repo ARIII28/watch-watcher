@@ -56,3 +56,9 @@ Stacktrace:
 	RtlInitializeExceptionChain [0x77BBBD2B+107]
 	RtlClearBits [0x77BBBCAF+191]
 
+2024-11-19 17:43:38,296 - INFO - ====== WebDriver manager ======
+2024-11-19 17:43:39,030 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 17:43:39,141 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 17:43:39,213 - INFO - Driver [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.69\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-19 17:43:46,316 - INFO - Extracted: CASIO, \u20b99195, 2024-11-19 17:43:46
+2024-11-19 17:43:46,317 - INFO - Logged to CSV: CASIO, \u20b99195, 2024-11-19 17:43:46
