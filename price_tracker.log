@@ -1,0 +1,58 @@
+2024-11-19 17:29:14,301 - INFO - ====== WebDriver manager ======
+2024-11-19 17:29:15,067 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 17:29:15,263 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 17:29:15,405 - INFO - Driver [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.69\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-19 17:29:43,442 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00D75093+25075]
+	(No symbol) [0x00CFE124]
+	(No symbol) [0x00BDBE63]
+	(No symbol) [0x00C1FD06]
+	(No symbol) [0x00C1FF4B]
+	(No symbol) [0x00C5D8C2]
+	(No symbol) [0x00C41EC4]
+	(No symbol) [0x00C5B48E]
+	(No symbol) [0x00C41C16]
+	(No symbol) [0x00C13F3C]
+	(No symbol) [0x00C14ECD]
+	GetHandleVerifier [0x01062523+3094147]
+	GetHandleVerifier [0x01075754+3172532]
+	GetHandleVerifier [0x0106DF32+3141778]
+	GetHandleVerifier [0x00E12100+668256]
+	(No symbol) [0x00D06C4D]
+	(No symbol) [0x00D03DF8]
+	(No symbol) [0x00D03F95]
+	(No symbol) [0x00CF6C80]
+	BaseThreadInitThunk [0x76337BA9+25]
+	RtlInitializeExceptionChain [0x77BBBD2B+107]
+	RtlClearBits [0x77BBBCAF+191]
+
+2024-11-19 17:30:49,351 - INFO - ====== WebDriver manager ======
+2024-11-19 17:30:50,027 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 17:30:51,779 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 17:30:51,855 - INFO - Driver [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.69\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-19 17:31:19,520 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00D75093+25075]
+	(No symbol) [0x00CFE124]
+	(No symbol) [0x00BDBE63]
+	(No symbol) [0x00C1FD06]
+	(No symbol) [0x00C1FF4B]
+	(No symbol) [0x00C5D8C2]
+	(No symbol) [0x00C41EC4]
+	(No symbol) [0x00C5B48E]
+	(No symbol) [0x00C41C16]
+	(No symbol) [0x00C13F3C]
+	(No symbol) [0x00C14ECD]
+	GetHandleVerifier [0x01062523+3094147]
+	GetHandleVerifier [0x01075754+3172532]
+	GetHandleVerifier [0x0106DF32+3141778]
+	GetHandleVerifier [0x00E12100+668256]
+	(No symbol) [0x00D06C4D]
+	(No symbol) [0x00D03DF8]
+	(No symbol) [0x00D03F95]
+	(No symbol) [0x00CF6C80]
+	BaseThreadInitThunk [0x76337BA9+25]
+	RtlInitializeExceptionChain [0x77BBBD2B+107]
+	RtlClearBits [0x77BBBCAF+191]
+
