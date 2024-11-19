@@ -29,11 +29,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium fake-useragent webdriver-manager
 
-      # Install Proxy and configure proxychains
-      - name: Install ProxyChains and configure
+      # Configure Proxychains for DNS resolution
+      - name: Configure proxychains
         run: |
-          sudo apt-get install proxychains
-          echo "socks5 127.0.0.1 9050" | sudo tee -a /etc/proxychains.conf
+          echo "proxy_dns" | sudo tee -a /etc/proxychains.conf
+          echo "strict_chain" | sudo tee -a /etc/proxychains.conf
 
       # Run the script with Proxy
       - name: Run Price Tracker with Proxy
@@ -43,9 +43,10 @@ jobs:
       # Commit and Push Changes
       - name: Commit and Push Changes
         run: |
-          git config --global user.name "ARIII28"
-          git config --global user.email "aribalan24@gmail.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add myntra.csv
           git commit -m "Update price data"
           git push
+
 
