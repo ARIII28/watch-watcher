@@ -1,4 +1,4 @@
-name: Price Tracker
+name: watch-watcher
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
     - cron: "0 0 * * *" # Runs every 24 hours (midnight)
 
 jobs:
-  price_tracking:
+  watch-watcher:
     runs-on: ubuntu-latest
 
     steps:
@@ -52,14 +52,15 @@ jobs:
       - name: Run Price Tracker
         run: python main.py
 
-      # Commit and Push Changes
-      - name: Commit and Push Changes
+      # Configure Git
+      - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      
+      # Commit and Push Changes
+      - name: Commit and Push Changes
+        run: |
           git add myntra.csv
-          git commit -m "Update price data"
+          git commit -m "Update Myntra CSV with new price data"
           git push
-        
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
