@@ -1,7 +1,1 @@
-﻿Project Title: Price Tracker Bot (Yes, It’s for That Watch I Want)
-
-This project is my very own price tracker bot, designed to monitor the price of a Casio G-Shock watch I’ve been eyeing on Myntra. The bot automatically checks the product price every day and logs the details in a CSV file, because let’s be real—I’d rather have data over waiting patiently.
-
-While I haven’t quite set up the notification feature yet (I know, I know... it’s on the to-do list!), the bot does all the heavy lifting—visiting the page, extracting product info, and checking if the price is within my budget (₹7000). When that day comes, and the price finally drops to the sweet spot, I’ll be able to see it right away in the logs, and maybe even buy the watch without thinking twice.
-
-To keep things automated, I’ve set it up on GitHub Actions. It runs once a day (thanks to cron jobs) and checks the price at midnight. It’s reliable, efficient, and gets the job done though...
+��

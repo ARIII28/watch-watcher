@@ -1,44 +1,44 @@
 name: Price Tracker Workflow
 
 on:
-  push:  # Trigger the workflow on push
+  push:
     branches:
-      - main  # Replace 'main' with your branch name if different
-
-  schedule:  # Trigger the workflow every 24 hours
-    - cron: '0 0 * * *'  # This runs at 12:00 AM UTC every day (adjust as needed)
+      - main  # Trigger on pushes to the main branch
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at 12:00 AM UTC
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  run-script:
+    runs-on: windows-latest  # Use Windows runner for compatibility
+
     steps:
-      - name: Checkout code
+      # Step 1: Checkout the repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Step 2: Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.10'  # Ensure Python 3.10 is used
 
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Install Chrome
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
-
-      - name: Run the Python script
+      # Step 4: Run the Python script
+      - name: Run the Python price tracker
         run: python main.py
-        
+
+      # Step 5: Commit and push updates to CSV/log
       - name: Commit and push changes
         run: |
           git config --global user.name "ARIII28"
           git config --global user.email "aribalan24@gmail.com"
           git add myntra.csv price_tracker.log
-          git commit -m "Update CSV and log files"  
+          git commit -m "Update CSV and log files"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

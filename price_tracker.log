@@ -285,3 +285,45 @@ Stacktrace:
 #17 0x5601fe6ec346 <unknown>
 #18 0x7f8288294ac3 <unknown>
 
+2024-11-20 04:07:01,994 - INFO - ====== WebDriver manager ======
+2024-11-20 04:07:02,868 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-20 04:07:03,178 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-20 04:07:03,302 - INFO - There is no [win64] chromedriver "131.0.6778.85" for browser google-chrome "131.0.6778" in cache
+2024-11-20 04:07:03,302 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-20 04:07:03,608 - INFO - WebDriver version 131.0.6778.85 selected
+2024-11-20 04:07:03,611 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.85/win32/chromedriver-win32.zip
+2024-11-20 04:07:03,612 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.85/win32/chromedriver-win32.zip
+2024-11-20 04:07:04,114 - INFO - Driver downloading response is 200
+2024-11-20 04:07:17,830 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-20 04:07:18,071 - INFO - Driver has been saved in cache [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.85]
+2024-11-20 04:07:46,085 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x007733E3+25059]
+	(No symbol) [0x006FCDE4]
+	(No symbol) [0x005DBEC3]
+	(No symbol) [0x0061FD86]
+	(No symbol) [0x0061FFCB]
+	(No symbol) [0x0065D952]
+	(No symbol) [0x00641F44]
+	(No symbol) [0x0065B51E]
+	(No symbol) [0x00641C96]
+	(No symbol) [0x00613FAC]
+	(No symbol) [0x00614F3D]
+	GetHandleVerifier [0x00A65543+3113795]
+	GetHandleVerifier [0x00A7A20A+3198986]
+	GetHandleVerifier [0x00A729E2+3168226]
+	GetHandleVerifier [0x00813250+680016]
+	(No symbol) [0x0070572D]
+	(No symbol) [0x007029D8]
+	(No symbol) [0x00702B75]
+	(No symbol) [0x006F57D0]
+	BaseThreadInitThunk [0x767A7BA9+25]
+	RtlInitializeExceptionChain [0x7782BD2B+107]
+	RtlClearBits [0x7782BCAF+191]
+
+2024-11-20 04:16:07,437 - INFO - ====== WebDriver manager ======
+2024-11-20 04:16:08,299 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-20 04:16:08,409 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-20 04:16:08,539 - INFO - Driver [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.85\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-20 04:16:15,926 - INFO - Extracted: CASIO, \u20b99195, 2024-11-20 04:16:15
+2024-11-20 04:16:15,927 - INFO - Logged to CSV: CASIO, \u20b99195, 2024-11-20 04:16:15

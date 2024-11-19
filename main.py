@@ -9,6 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from fake_useragent import UserAgent
 from webdriver_manager.chrome import ChromeDriverManager
+import os
 
 # Set up logging
 logging.basicConfig(
@@ -20,7 +21,8 @@ logging.basicConfig(
 # Here is the product URL and price threshold
 product_url = "https://www.myntra.com/watches/casio/casio-men-g-shock-ga-2100-1a1dr-black-analog-digital-dial-black-resin-strap-watch-g987/10761810/buy"
 price_threshold = 7000 # Price limit set to ₹7000 for the product
-csv_file = "myntra.csv"  # File where we can log our scraped data
+github_path = os.getenv('GITHUB_WORKSPACE', os.getcwd())  # GitHub sets GITHUB_WORKSPACE to the repository's root
+csv_file = os.path.join(github_path, "myntra.csv") # File where we can log our scraped data
 
 # Set up Chrome options
 options = Options()
