@@ -35,8 +35,8 @@ jobs:
         
       - name: Commit and push changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "ARIII28"
+          git config --global user.email "aribalan24@gmail.com"
           git add myntra.csv price_tracker.log
           git commit -m "Update CSV and log files"
           git pull --rebase main  
