@@ -434,3 +434,39 @@ Stacktrace:
 2024-11-20 04:37:43,623 - INFO - Driver [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.85\chromedriver-win32/chromedriver.exe] found in cache
 2024-11-20 04:37:49,912 - INFO - Extracted: CASIO, \u20b99195, 2024-11-20 04:37:49
 2024-11-20 04:37:49,913 - INFO - Logged to CSV: CASIO, \u20b99195, 2024-11-20 04:37:49
+2024-11-19 23:09:51,292 - INFO - ====== WebDriver manager ======
+2024-11-19 23:09:52,200 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 23:09:52,215 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 23:09:52,231 - INFO - There is no [win64] chromedriver "130.0.6723.116" for browser google-chrome "130.0.6723" in cache
+2024-11-19 23:09:52,231 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 23:09:52,278 - INFO - WebDriver version 130.0.6723.116 selected
+2024-11-19 23:09:52,278 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.116/win32/chromedriver-win32.zip
+2024-11-19 23:09:52,278 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.116/win32/chromedriver-win32.zip
+2024-11-19 23:09:52,497 - INFO - Driver downloading response is 200
+2024-11-19 23:09:52,528 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 23:09:52,637 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\130.0.6723.116]
+2024-11-19 23:11:25,851 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0067EBD3+24307]
+	(No symbol) [0x00608D74]
+	(No symbol) [0x004EC323]
+	(No symbol) [0x0052DC86]
+	(No symbol) [0x0052DECB]
+	(No symbol) [0x0056B9F2]
+	(No symbol) [0x0054FED4]
+	(No symbol) [0x00569579]
+	(No symbol) [0x0054FC26]
+	(No symbol) [0x0052219C]
+	(No symbol) [0x0052311D]
+	GetHandleVerifier [0x00928D93+2818227]
+	GetHandleVerifier [0x0098542E+3196750]
+	GetHandleVerifier [0x0097D9D2+3165426]
+	GetHandleVerifier [0x0071DA70+675216]
+	(No symbol) [0x00611B3D]
+	(No symbol) [0x0060EA18]
+	(No symbol) [0x0060EBB5]
+	(No symbol) [0x00601640]
+	BaseThreadInitThunk [0x76CB67F9+25]
+	RtlGetFullPathName_UEx [0x77EA7F6D+173]
+	RtlGetFullPathName_UEx [0x77EA7F3B+123]
+
