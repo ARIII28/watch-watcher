@@ -52,13 +52,5 @@ jobs:
         run: |
           python main.py
 
-      # Commit and Push Changes
-      - name: Commit and Push Changes
-        run: |
-          git config --global user.name "ARIII28"
-          git config --global user.email "aribalan24@gmail.com.com"
-          git add myntra.csv
-          git commit -m "Update price data"
-          git push
  
         
