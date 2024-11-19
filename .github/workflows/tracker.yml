@@ -56,3 +56,5 @@ jobs:
       - name: Commit and Push Changes if modified
         run: |
           git diff --quiet myntra.csv || git commit -am "Update price data" && git push
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
