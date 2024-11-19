@@ -32,6 +32,14 @@ jobs:
 
       - name: Run the Python script
         run: python main.py
+        
+      - name: Commit CSV and log updates
+        run: |
+          git add .
+          git commit -m "Update CSV and log files from workflow" || echo "No changes to commit"
 
+      # Step 9: Push changes back to the repository
+      - name: Push changes
+        run: git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
