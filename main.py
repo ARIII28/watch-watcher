@@ -26,7 +26,7 @@ csv_file = "myntra.csv"  # File where we can log our scraped data
 options = Options()
 ua = UserAgent()
 options.add_argument(f"user-agent={ua.random}")  # Random user-agent to access the product page
-options.add_argument("--headless")  # Run in headless mode (important for GitHub automation)
+options.add_argument("--headless=new")  # Run in headless mode (important for GitHub automation)
 options.add_argument("--disable-gpu")
 options.add_argument("--disable-popup-blocking")
 options.add_argument("--disable-notifications")
@@ -44,7 +44,8 @@ def ensure_header():
 
 ensure_header()
 
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))  # Initializes the Chrome WebDriver with specified options
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+ # Initializes the Chrome WebDriver with specified options
 
 try:
     driver.get(product_url)

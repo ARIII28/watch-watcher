@@ -118,3 +118,38 @@ Stacktrace:
 2024-11-19 19:33:27,250 - INFO - Driver [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.69\chromedriver-win32/chromedriver.exe] found in cache
 2024-11-19 19:33:37,144 - INFO - Extracted: CASIO, \u20b99195, 2024-11-19 19:33:37
 2024-11-19 19:33:37,146 - INFO - Logged to CSV: CASIO, \u20b99195, 2024-11-19 19:33:37
+2024-11-19 20:01:49,140 - INFO - ====== WebDriver manager ======
+2024-11-19 20:01:50,252 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 20:01:50,585 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 20:01:50,837 - INFO - Driver [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.69\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-19 20:02:04,546 - INFO - Extracted: CASIO, \u20b99195, 2024-11-19 20:02:04
+2024-11-19 20:02:04,548 - INFO - Logged to CSV: CASIO, \u20b99195, 2024-11-19 20:02:04
+2024-11-19 20:04:02,314 - INFO - ====== WebDriver manager ======
+2024-11-19 20:04:03,422 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 20:04:03,691 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 20:04:03,875 - INFO - Driver [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.69\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-19 20:04:31,892 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00785093+25075]
+	(No symbol) [0x0070E124]
+	(No symbol) [0x005EBE63]
+	(No symbol) [0x0062FD06]
+	(No symbol) [0x0062FF4B]
+	(No symbol) [0x0066D8C2]
+	(No symbol) [0x00651EC4]
+	(No symbol) [0x0066B48E]
+	(No symbol) [0x00651C16]
+	(No symbol) [0x00623F3C]
+	(No symbol) [0x00624ECD]
+	GetHandleVerifier [0x00A72523+3094147]
+	GetHandleVerifier [0x00A85754+3172532]
+	GetHandleVerifier [0x00A7DF32+3141778]
+	GetHandleVerifier [0x00822100+668256]
+	(No symbol) [0x00716C4D]
+	(No symbol) [0x00713DF8]
+	(No symbol) [0x00713F95]
+	(No symbol) [0x00706C80]
+	BaseThreadInitThunk [0x76337BA9+25]
+	RtlInitializeExceptionChain [0x77BBBD2B+107]
+	RtlClearBits [0x77BBBCAF+191]
+
