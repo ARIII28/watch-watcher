@@ -219,3 +219,36 @@ Stacktrace:
 #17 0x556573d95346 <unknown>
 #18 0x7fd7e3694ac3 <unknown>
 
+2024-11-19 15:19:15,763 - INFO - ====== WebDriver manager ======
+2024-11-19 15:19:15,957 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 15:19:15,997 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 15:19:16,020 - INFO - There is no [linux64] chromedriver "131.0.6778.69" for browser google-chrome "131.0.6778" in cache
+2024-11-19 15:19:16,020 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 15:19:16,086 - INFO - WebDriver version 131.0.6778.69 selected
+2024-11-19 15:19:16,088 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.69/linux64/chromedriver-linux64.zip
+2024-11-19 15:19:16,088 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.69/linux64/chromedriver-linux64.zip
+2024-11-19 15:19:16,115 - INFO - Driver downloading response is 200
+2024-11-19 15:19:16,188 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 15:19:16,350 - INFO - Driver has been saved in cache [/home/runner/.wdm/drivers/chromedriver/linux64/131.0.6778.69]
+2024-11-19 15:19:37,178 - ERROR - Error: Message: 
+Stacktrace:
+#0 0x55d7daff74ca <unknown>
+#1 0x55d7dab0a620 <unknown>
+#2 0x55d7dab59306 <unknown>
+#3 0x55d7dab595a1 <unknown>
+#4 0x55d7dab9ea04 <unknown>
+#5 0x55d7dab7d39d <unknown>
+#6 0x55d7dab9bde0 <unknown>
+#7 0x55d7dab7d113 <unknown>
+#8 0x55d7dab4bbe0 <unknown>
+#9 0x55d7dab4cbbe <unknown>
+#10 0x55d7dafc3e4b <unknown>
+#11 0x55d7dafc7de2 <unknown>
+#12 0x55d7dafb0d2c <unknown>
+#13 0x55d7dafc8957 <unknown>
+#14 0x55d7daf964bf <unknown>
+#15 0x55d7dafe6348 <unknown>
+#16 0x55d7dafe6510 <unknown>
+#17 0x55d7daff6346 <unknown>
+#18 0x7f0d89a94ac3 <unknown>
+
