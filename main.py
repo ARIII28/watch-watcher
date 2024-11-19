@@ -34,7 +34,7 @@ options.add_argument("--disable-infobars")
 options.add_argument("--disable-dev-shm-usage")
 
 # Set up ChromeDriver
-service = Service(ChromeDriverManager().install())  # Automatically downloads and sets up the ChromeDriver
+driver_path = ChromeDriverManager(version="131.0.6778.69").install()  # Automatically downloads and sets up the ChromeDriver
 
 # Ensure header is written only if the file is empty (it defines the columns for the scraped data)
 def ensure_header():
