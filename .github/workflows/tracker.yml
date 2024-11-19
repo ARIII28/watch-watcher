@@ -7,7 +7,6 @@ on:
   workflow_dispatch: # Allows manual triggering of the workflow
   schedule:
     - cron: "0 0 * * *" # Runs every 24 hours at midnight (UTC)
-
 jobs:
   price_tracking:
     runs-on: ubuntu-latest
@@ -29,14 +28,31 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium fake-useragent webdriver-manager
 
-      # Configure Proxychains for DNS resolution
-      - name: Configure proxychains
+      # Install Google Chrome
+      - name: Install Google Chrome
         run: |
-          echo "proxy_dns" | sudo tee -a /etc/proxychains.conf
-          echo "strict_chain" | sudo tee -a /etc/proxychains.conf
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i google-chrome-stable_current_amd64.deb
+          sudo apt-get -f install
 
-      # Run the script with Proxy
-      - name: Run Price Tracker with Proxy
+      # Install ChromeDriver
+      - name: Install ChromeDriver
+        run: |
+          LATEST=$(wget -qO- https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+          wget https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+          sudo mv chromedriver /usr/local/bin/chromedriver
+          sudo chmod +x /usr/local/bin/chromedriver
+
+      # Install Proxychains
+      - name: Install Proxychains
+        run: |
+          sudo apt-get install -y proxychains
+
+      # Run the script using Proxychains
+      - name: Run Price Tracker with Proxychains
         run: |
           proxychains python main.py
 
