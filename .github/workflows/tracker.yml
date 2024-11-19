@@ -16,6 +16,11 @@ jobs:
       # Checkout the repository
       - name: Checkout Code
         uses: actions/checkout@v3
+        
+      - name: Set up Docker container with VPN
+        run: |
+          docker run -d --name vpn-container -v $(pwd):/workspace -e VPN_CONFIG=$VPN_CONFIG my-vpn-enabled-docker-image
+          docker exec vpn-container bash -c "cd /workspace && python main.py"
 
       # Set up Python
       - name: Set up Python
