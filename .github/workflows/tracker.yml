@@ -49,9 +49,16 @@ jobs:
           rm chromedriver-linux64.zip
 
       # Run the script using Proxychains
+      - name: Install Proxychains and Tor
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y proxychains tor
+
       - name: Run Price Tracker with Proxychains
         run: |
+          sudo service tor start
           proxychains python main.py
+
 
       # Commit and Push Changes
       - name: Commit and Push Changes
