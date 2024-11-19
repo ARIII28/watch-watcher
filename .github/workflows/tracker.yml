@@ -38,7 +38,7 @@ jobs:
           sudo dpkg -i google-chrome-stable_current_amd64.deb
           sudo apt-get -f install
 
-      # Install ChromeDriver
+      # Install ChromeDriver (latest version)
       - name: Install ChromeDriver
         run: |
           # Get the latest version of ChromeDriver
@@ -47,6 +47,14 @@ jobs:
           unzip chromedriver_linux64.zip
           sudo mv chromedriver /usr/local/bin/chromedriver
           sudo chmod +x /usr/local/bin/chromedriver
+
+      # Verify Google Chrome Installation
+      - name: Verify Google Chrome Installation
+        run: google-chrome-stable --version
+
+      # Verify ChromeDriver Installation
+      - name: Verify ChromeDriver Installation
+        run: chromedriver --version
 
       # Run the script
       - name: Run Price Tracker

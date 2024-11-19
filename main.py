@@ -65,3 +65,4 @@ except Exception as e:
 finally:
     # Quit the WebDriver
     driver.quit()
+    raise
