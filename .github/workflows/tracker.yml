@@ -38,8 +38,7 @@ jobs:
           git config --global user.name "ARIII28"
           git config --global user.email "aribalan24@gmail.com"
           git add myntra.csv price_tracker.log
-          git commit -m "Update CSV and log files"
-          git pull --rebase main  
+          git commit -m "Update CSV and log files"  
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
