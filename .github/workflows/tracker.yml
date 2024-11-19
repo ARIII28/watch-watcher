@@ -1,7 +1,8 @@
 name: Price Tracker Workflow
 
 on:
-  workflow_dispatch:  # Allows manual triggering
+  schedule:
+    - cron: '0 0 * * *'  # Runs at midnight (UTC) every day
 
 jobs:
   track-price:
