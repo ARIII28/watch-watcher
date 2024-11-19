@@ -29,6 +29,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium fake-useragent webdriver-manager
 
+      # Install Chrome dependencies
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget libx11-dev libglib2.0-0 libnss3 libgdk-pixbuf2.0-0 libatspi2.0-0
+
       # Install Google Chrome
       - name: Install Google Chrome
         run: |
@@ -41,7 +47,6 @@ jobs:
       # Install ChromeDriver (latest version)
       - name: Install ChromeDriver
         run: |
-          # Get the latest version of ChromeDriver
           LATEST=$(wget -qO- https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
           wget https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
           unzip chromedriver_linux64.zip
