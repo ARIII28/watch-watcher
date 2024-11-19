@@ -108,3 +108,13 @@ Stacktrace:
 2024-11-19 19:04:00,668 - INFO - Driver [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.69\chromedriver-win32/chromedriver.exe] found in cache
 2024-11-19 19:04:08,434 - INFO - Extracted: CASIO, \u20b99195, 2024-11-19 19:04:08
 2024-11-19 19:04:08,436 - INFO - Logged to CSV: CASIO, \u20b99195, 2024-11-19 19:04:08
+2024-11-19 19:30:18,832 - INFO - ====== WebDriver manager ======
+2024-11-19 19:30:19,586 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 19:30:19,885 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 19:30:20,164 - INFO - Driver [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.69\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-19 19:33:25,914 - INFO - ====== WebDriver manager ======
+2024-11-19 19:33:26,652 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 19:33:26,856 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-19 19:33:27,250 - INFO - Driver [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.69\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-19 19:33:37,144 - INFO - Extracted: CASIO, \u20b99195, 2024-11-19 19:33:37
+2024-11-19 19:33:37,146 - INFO - Logged to CSV: CASIO, \u20b99195, 2024-11-19 19:33:37

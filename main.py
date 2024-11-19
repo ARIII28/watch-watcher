@@ -2,7 +2,7 @@ import csv
 import logging
 from datetime import datetime
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -19,7 +19,7 @@ logging.basicConfig(
 
 # Here is the product URL and price threshold
 product_url = "https://www.myntra.com/watches/casio/casio-men-g-shock-ga-2100-1a1dr-black-analog-digital-dial-black-resin-strap-watch-g987/10761810/buy"
-price_threshold = 6500  # Price limit set to ₹6500 for the product
+price_threshold = 7000 # Price limit set to ₹7000 for the product
 csv_file = "myntra.csv"  # File where we can log our scraped data
 
 # Set up Chrome options
@@ -34,7 +34,7 @@ options.add_argument("--disable-infobars")
 options.add_argument("--disable-dev-shm-usage")
 
 # Set up ChromeDriver
-driver_path = ChromeDriverManager(version="131.0.6778.69").install()  # Automatically downloads and sets up the ChromeDriver
+#driver_path = ChromeDriverManager(version="131.0.6778.69").install()  # Automatically downloads and sets up the ChromeDriver
 
 # Ensure header is written only if the file is empty (it defines the columns for the scraped data)
 def ensure_header():
@@ -44,7 +44,7 @@ def ensure_header():
 
 ensure_header()
 
-driver = webdriver.Chrome(service=service, options=options)  # Initializes the Chrome WebDriver with specified options
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))  # Initializes the Chrome WebDriver with specified options
 
 try:
     driver.get(product_url)
