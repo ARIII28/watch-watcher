@@ -14,6 +14,7 @@ price_threshold = 6500  #  so here the Price limit set to ₹6500 for the produc
 csv_file = "myntra.csv" #file where we can log our scraped data
 
 # Set up Chrome options
+options = webdriver.ChromeOptions()
 options = Options()
 ua = UserAgent()
 options.add_argument(f"user-agent={ua.random}") # this is really important to generate random agent to access the product page 
@@ -25,7 +26,7 @@ options.add_argument("--disable-infobars")
 options.add_argument("--disable-dev-shm-usage") 
 
 # Set up ChromeDriver
-from webdriver_manager.chrome import ChromeDriverManager
+
 
 # its download ChromeDriver corresponding to your installed Chrome version
 service = Service("/usr/local/bin/chromedriver")
