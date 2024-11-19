@@ -29,12 +29,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium fake-useragent webdriver-manager
 
-      # Install Chrome dependencies
-      - name: Install Chrome dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wget libx11-dev libglib2.0-0 libnss3 libgdk-pixbuf2.0-0 libatspi2.0-0
-
       # Install Google Chrome
       - name: Install Google Chrome
         run: |
@@ -44,26 +38,39 @@ jobs:
           sudo dpkg -i google-chrome-stable_current_amd64.deb
           sudo apt-get -f install
 
-      # Install ChromeDriver (latest version)
+      # Install Chrome dependencies
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get install -y \
+            libxss1 \
+            libappindicator3-1 \
+            libasound2 \
+            libatk-bridge2.0-0 \
+            libatk1.0-0 \
+            libcups2 \
+            libgdk-pixbuf2.0-0 \
+            libnspr4 \
+            libnss3 \
+            libx11-xcb1 \
+            libxtst6
+
+      # Install ChromeDriver
       - name: Install ChromeDriver
         run: |
+          # Get the latest version of ChromeDriver
           LATEST=$(wget -qO- https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
           wget https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
           unzip chromedriver_linux64.zip
           sudo mv chromedriver /usr/local/bin/chromedriver
           sudo chmod +x /usr/local/bin/chromedriver
 
-      # Verify Google Chrome Installation
-      - name: Verify Google Chrome Installation
-        run: google-chrome-stable --version
-
-      # Verify ChromeDriver Installation
-      - name: Verify ChromeDriver Installation
-        run: chromedriver --version
-
-      # Run the script
-      - name: Run Price Tracker
-        run: python main.py
+      # Run the script with logging enabled
+      - name: Run Price Tracker with Logging
+        run: |
+          python -m pip install selenium
+          python main.py
+        env:
+          DISPLAY: :99.0  # Necessary for running headless Chrome on GitHub Actions runner
 
       # Commit and Push Changes if modified
       - name: Commit and Push Changes if modified
