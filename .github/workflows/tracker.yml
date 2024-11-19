@@ -60,3 +60,6 @@ jobs:
           git add myntra.csv
           git commit -m "Update price data"
           git push
+        
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
