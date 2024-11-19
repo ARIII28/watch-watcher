@@ -1,65 +1,62 @@
-name: Selenium Workflow
+name: watch-watcher
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch: # Allows manual triggering of the workflow
+  schedule:
+    - cron: "0 0 * * *" # Runs every 24 hours at midnight (UTC)
 
 jobs:
-  selenium:
+  price_tracking:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the repository
-    - name: Checkout Code
-      uses: actions/checkout@v3
+      # Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    # Step 2: Set up Python environment
-    - name: Set up Python
-      uses: actions/setup-python@v3
-      with:
-        python-version: 3.10  # Ensure you're specifying a valid Python version like 3.10 or 3.11
+      # Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
-    # Step 3: Install dependencies
-    - name: Install Dependencies
-      run: |
-        pip install -r requirements.txt
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable xvfb
-        wget -N https://chromedriver.storage.googleapis.com/$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
-        unzip chromedriver_linux64.zip
-        sudo mv chromedriver /usr/bin/chromedriver
-        chmod +x /usr/bin/chromedriver
-        chromedriver --version
-        google-chrome --version
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install selenium fake-useragent webdriver-manager
 
-    # Step 4: Verify Chrome and ChromeDriver versions
-    - name: Debug Chrome and ChromeDriver
-      run: |
-        google-chrome --version
-        chromedriver --version
+      # Install Google Chrome
+      - name: Install Google Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i google-chrome-stable_current_amd64.deb
+          sudo apt-get -f install
 
-    # Step 5: Set up display for headless mode
-    - name: Set up Display
-      run: |
-        Xvfb :99 -screen 0 1024x768x16 &
-      env:
-        DISPLAY: :99
+      # Install ChromeDriver
+      - name: Install ChromeDriver
+        run: |
+          # Get the latest version of ChromeDriver
+          LATEST=$(wget -qO- https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+          wget https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+          sudo mv chromedriver /usr/local/bin/chromedriver
+          sudo chmod +x /usr/local/bin/chromedriver
 
-    # Step 6: Run the Selenium script
-    - name: Run Selenium Script
-      run: python main.py
-      env:
-        DISPLAY: :99
+      # Run the script
+      - name: Run Price Tracker
+        run: python main.py
 
-    # Step 7: Commit and Push CSV changes
-    - name: Commit and Push Changes
-      run: |
-        git config --global user.name "GitHub Actions Bot"
-        git config --global user.email "actions@github.com"
-        git add myntra.csv
-        git commit -m "Update price data [Automated]"
-        git push
-      env:
-        DISPLAY: :99
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Commit and Push Changes
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add myntra.csv
+          git commit -m "Update price data"
+          git push
