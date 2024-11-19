@@ -1,48 +1,51 @@
 name: Price Tracker Workflow
 
 on:
-  schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight
-  workflow_dispatch: # Allows manual trigger
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   track-price:
     runs-on: ubuntu-latest
-    
     steps:
-      # Step 1: Check out the repository
-      - name: Check out code
+      # Step 1: Checkout the repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up Python
+      # Step 2: Set up Python environment
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      # Step 3: Install dependencies
+      # Step 3: Install Chrome
+      - name: Install Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
+      # Step 4: Install Python dependencies
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Step 4: Run the price tracker script
-      - name: Run the script
-        run: |
-          python main.py
+      # Step 5: Run the Python script
+      - name: Run Price Tracker Script
+        run: python main.py
 
-      # Step 5: Configure Git
+      # Step 6: Configure Git to commit changes
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      # Step 6: Commit and push changes
-      - name: Commit and Push Changes
+      # Step 7: Commit changes to the repository
+      - name: Commit CSV and log updates
         run: |
-          git add myntra.csv price_tracker.log
-          git commit -m "Update CSV and log file"
-          git push
+          git add .
+          git commit -m "Update CSV and log files from workflow" || echo "No changes to commit"
+
+      # Step 8: Push changes back to the repository
+      - name: Push changes
+        run: git push
         env:
-          # Use the GitHub token for authentication
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
