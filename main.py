@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from fake_useragent import UserAgent
-from webdriver_manager.chrome import ChromeDriverManager
+
 ## here the product i've wanted to track or its webpage
 product_url = "https://www.myntra.com/watches/casio/casio-men-g-shock-ga-2100-1a1dr-black-analog-digital-dial-black-resin-strap-watch-g987/10761810/buy"
 price_threshold = 6500  #  so here the Price limit set to ₹6500 for the product
@@ -25,7 +25,12 @@ options.add_argument("--disable-infobars")
 options.add_argument("--disable-dev-shm-usage") 
 
 # Set up ChromeDriver
-service = Service(ChromeDriverManager().install())  # Automatically downloads and sets up the ChromeDrive
+from webdriver_manager.chrome import ChromeDriverManager
+
+# its download ChromeDriver corresponding to your installed Chrome version
+service = Service("/usr/local/bin/chromedriver")
+
+  # Automatically downloads and sets up the ChromeDrive
 
 # Ensure header is written only if the file is empty (it defines the columns for the scraped data)
 def ensure_header():
@@ -61,6 +66,7 @@ try:
 
 except Exception as e:
     print(f"Error: {e}")
+    raise
 
 finally:
     # Quit the WebDriver

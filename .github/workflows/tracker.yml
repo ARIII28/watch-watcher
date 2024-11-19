@@ -1,4 +1,4 @@
-name: Price Tracker
+name: watch-watcher
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"  # Run every day at midnight
+    - cron: "0 0 * * *"
 
 jobs:
   price_tracking:
@@ -29,11 +29,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium fake-useragent webdriver-manager
 
-      # Install Google Chrome and ChromeDriver
-      - name: Install Google Chrome and ChromeDriver
+      # Install Google Chrome
+      - name: Install Google Chrome
         run: |
           sudo apt-get update
-          sudo apt-get upgrade -y
           sudo apt-get install -y wget unzip
 
           # Manually download and install Chrome
@@ -41,17 +40,11 @@ jobs:
           wget -q $CHROME_URL -O chrome-linux64.zip
           sudo unzip -o chrome-linux64.zip -d /usr/local/
           rm chrome-linux64.zip
-          
-          # Manually download and install ChromeDriver
-          CHROMEDRIVER_URL="https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.69/linux64/chromedriver-linux64.zip"
-          wget -q $CHROMEDRIVER_URL
-          sudo unzip -o chromedriver-linux64.zip -d /usr/local/bin/
-          rm chromedriver-linux64.zip
 
-      # Run the Python script to track prices
+      # Run Python Script
       - name: Run Price Tracker Script
         run: |
-          python main.py  # Run your Python script
+          python main.py
 
       # Commit and Push Changes
       - name: Commit and Push Changes
