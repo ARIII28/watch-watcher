@@ -399,3 +399,38 @@ Stacktrace:
 	RtlGetFullPathName_UEx [0x776E7F6D+173]
 	RtlGetFullPathName_UEx [0x776E7F3B+123]
 
+2024-11-20 04:36:58,212 - INFO - ====== WebDriver manager ======
+2024-11-20 04:36:58,882 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-20 04:36:59,010 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-20 04:36:59,077 - INFO - Driver [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.85\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-20 04:37:27,275 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00C533E3+25059]
+	(No symbol) [0x00BDCDE4]
+	(No symbol) [0x00ABBEC3]
+	(No symbol) [0x00AFFD86]
+	(No symbol) [0x00AFFFCB]
+	(No symbol) [0x00B3D952]
+	(No symbol) [0x00B21F44]
+	(No symbol) [0x00B3B51E]
+	(No symbol) [0x00B21C96]
+	(No symbol) [0x00AF3FAC]
+	(No symbol) [0x00AF4F3D]
+	GetHandleVerifier [0x00F45543+3113795]
+	GetHandleVerifier [0x00F5A20A+3198986]
+	GetHandleVerifier [0x00F529E2+3168226]
+	GetHandleVerifier [0x00CF3250+680016]
+	(No symbol) [0x00BE572D]
+	(No symbol) [0x00BE29D8]
+	(No symbol) [0x00BE2B75]
+	(No symbol) [0x00BD57D0]
+	BaseThreadInitThunk [0x767A7BA9+25]
+	RtlInitializeExceptionChain [0x7782BD2B+107]
+	RtlClearBits [0x7782BCAF+191]
+
+2024-11-20 04:37:42,799 - INFO - ====== WebDriver manager ======
+2024-11-20 04:37:43,465 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-20 04:37:43,552 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-20 04:37:43,623 - INFO - Driver [C:\Users\Ari\.wdm\drivers\chromedriver\win64\131.0.6778.85\chromedriver-win32/chromedriver.exe] found in cache
+2024-11-20 04:37:49,912 - INFO - Extracted: CASIO, \u20b99195, 2024-11-20 04:37:49
+2024-11-20 04:37:49,913 - INFO - Logged to CSV: CASIO, \u20b99195, 2024-11-20 04:37:49
