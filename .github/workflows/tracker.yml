@@ -1,75 +1,65 @@
-name: watch-watcher
+name: Selenium Workflow
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch: # Allows manual triggering of the workflow
-  schedule:
-    - cron: "0 0 * * *" # Runs every 24 hours at midnight (UTC)
 
 jobs:
-  price_tracking:
+  selenium:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository
-      - name: Checkout Code
-        uses: actions/checkout@v3
+    # Step 1: Check out the repository
+    - name: Checkout Code
+      uses: actions/checkout@v3
 
-      # Set up Python
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+    # Step 2: Set up Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.10
 
-      # Install dependencies
-      - name: Install Python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install selenium fake-useragent webdriver-manager
+    # Step 3: Install dependencies
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable xvfb
+        wget -N https://chromedriver.storage.googleapis.com/$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
+        unzip chromedriver_linux64.zip
+        sudo mv chromedriver /usr/bin/chromedriver
+        chmod +x /usr/bin/chromedriver
+        chromedriver --version
+        google-chrome --version
 
-      # Install Google Chrome
-      - name: Install Google Chrome
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wget
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo dpkg -i google-chrome-stable_current_amd64.deb
-          sudo apt-get -f install -y
+    # Step 4: Verify Chrome and ChromeDriver versions
+    - name: Debug Chrome and ChromeDriver
+      run: |
+        google-chrome --version
+        chromedriver --version
 
-      # Verify Google Chrome Installation
-      - name: Verify Chrome Installation
-        run: google-chrome --version
+    # Step 5: Set up display for headless mode
+    - name: Set up Display
+      run: |
+        Xvfb :99 -screen 0 1024x768x16 &
+      env:
+        DISPLAY: :99
 
-      # Install ChromeDriver
-      - name: Install ChromeDriver
-        run: |
-          LATEST=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
-          wget https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
-          unzip chromedriver_linux64.zip
-          sudo mv chromedriver /usr/local/bin/chromedriver
-          sudo chmod +x /usr/local/bin/chromedriver
+    # Step 6: Run the Selenium script
+    - name: Run Selenium Script
+      run: python main.py
+      env:
+        DISPLAY: :99
 
-      # Verify ChromeDriver Installation
-      - name: Verify ChromeDriver Installation
-        run: chromedriver --version
-
-      # Set up virtual display for Selenium
-      - name: Set up virtual display
-        run: |
-          sudo apt-get install -y xvfb
-          Xvfb :99 -screen 0 1920x1080x16 &
-        env:
-          DISPLAY: :99
-
-      # Run the Python script
-      - name: Run Price Tracker
-        run: python main.py
-
-      # Commit and push changes if the CSV is modified
-      - name: Commit and Push Changes if modified
-        run: |
-          git diff --quiet myntra.csv || git add myntra.csv && git commit -m "Update price data" && git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # Step 7: Commit and Push CSV changes
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name "ARIII28"
+        git config --global user.email "aribalan24@gmail.com"
+        git add myntra.csv
+        git commit -m "Update price data [Automated]"
+        git push
+      env:
+        DISPLAY: :99
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
