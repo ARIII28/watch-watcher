@@ -1,12 +1,9 @@
 name: Price Tracker Workflow
 
 on:
-  push:  # Trigger the workflow on push
+  push:
     branches:
-      - main  # Replace 'main' with your branch name if different
-
-  schedule:  # Trigger the workflow every 24 hours
-    - cron: '0 0 * * *'  # This runs at 12:00 AM UTC every day (adjust as needed)
+      - main
 
 jobs:
   track-price:
@@ -28,29 +25,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
 
-      # Step 4: Install Python dependencies
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-
-      # Step 5: Run the Python script
-      - name: Run Price Tracker Script
-        run: python main.py
-
-      # Step 6: Configure Git to commit changes
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      # Step 7: Commit changes to the repository
-      - name: Commit CSV and log updates
-        run: |
-          git add .
-          git commit -m "Update CSV and log files from workflow" || echo "No changes to commit"
-
-      # Step 8: Push changes back to the repository
-      - name: Push changes
-        run: git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Step 4: Check Chrome Version
+      - name: Check Chrome Version
+        run: google-chrome-stable --version
