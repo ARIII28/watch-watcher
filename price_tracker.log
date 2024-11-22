@@ -542,3 +542,39 @@ Stacktrace:
 	RtlGetFullPathName_UEx [0x77337F6D+173]
 	RtlGetFullPathName_UEx [0x77337F3B+123]
 
+2024-11-22 01:23:23,322 - INFO - ====== WebDriver manager ======
+2024-11-22 01:23:24,182 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-22 01:23:24,197 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-22 01:23:24,197 - INFO - There is no [win64] chromedriver "131.0.6778.85" for browser google-chrome "131.0.6778" in cache
+2024-11-22 01:23:24,197 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-22 01:23:24,252 - INFO - WebDriver version 131.0.6778.85 selected
+2024-11-22 01:23:24,252 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.85/win32/chromedriver-win32.zip
+2024-11-22 01:23:24,252 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.85/win32/chromedriver-win32.zip
+2024-11-22 01:23:24,354 - INFO - Driver downloading response is 200
+2024-11-22 01:23:24,401 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-22 01:23:24,511 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\131.0.6778.85]
+2024-11-22 01:24:07,218 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00D933E3+25059]
+	(No symbol) [0x00D1CDE4]
+	(No symbol) [0x00BFBEC3]
+	(No symbol) [0x00C3FD86]
+	(No symbol) [0x00C3FFCB]
+	(No symbol) [0x00C7D952]
+	(No symbol) [0x00C61F44]
+	(No symbol) [0x00C7B51E]
+	(No symbol) [0x00C61C96]
+	(No symbol) [0x00C33FAC]
+	(No symbol) [0x00C34F3D]
+	GetHandleVerifier [0x01085543+3113795]
+	GetHandleVerifier [0x0109A20A+3198986]
+	GetHandleVerifier [0x010929E2+3168226]
+	GetHandleVerifier [0x00E33250+680016]
+	(No symbol) [0x00D2572D]
+	(No symbol) [0x00D229D8]
+	(No symbol) [0x00D22B75]
+	(No symbol) [0x00D157D0]
+	BaseThreadInitThunk [0x76D567F9+25]
+	RtlGetFullPathName_UEx [0x77927F6D+173]
+	RtlGetFullPathName_UEx [0x77927F3B+123]
+
