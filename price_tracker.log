@@ -974,3 +974,40 @@ Stacktrace:
 	RtlGetFullPathName_UEx [0x76F57F6D+173]
 	RtlGetFullPathName_UEx [0x76F57F3B+123]
 
+2024-12-04 01:26:13,902 - INFO - ====== WebDriver manager ======
+2024-12-04 01:26:14,731 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-04 01:26:14,778 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-04 01:26:14,825 - INFO - There is no [win64] chromedriver "131.0.6778.87" for browser google-chrome "131.0.6778" in cache
+2024-12-04 01:26:14,825 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-04 01:26:14,950 - INFO - WebDriver version 131.0.6778.87 selected
+2024-12-04 01:26:14,950 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.87/win32/chromedriver-win32.zip
+2024-12-04 01:26:14,950 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.87/win32/chromedriver-win32.zip
+2024-12-04 01:26:15,137 - INFO - Driver downloading response is 200
+2024-12-04 01:26:15,575 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-04 01:26:15,731 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\131.0.6778.87]
+2024-12-04 01:26:59,916 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x002F3433+25059]
+	(No symbol) [0x0027CE34]
+	(No symbol) [0x0015BEC3]
+	(No symbol) [0x0019FD86]
+	(No symbol) [0x0019FFCB]
+	(No symbol) [0x001DD952]
+	(No symbol) [0x001C1F44]
+	(No symbol) [0x001DB51E]
+	(No symbol) [0x001C1C96]
+	(No symbol) [0x00193FAC]
+	(No symbol) [0x00194F3D]
+	GetHandleVerifier [0x005E5593+3113795]
+	GetHandleVerifier [0x005FA25A+3198986]
+	GetHandleVerifier [0x005F2A32+3168226]
+	GetHandleVerifier [0x003932A0+680016]
+	(No symbol) [0x0028577D]
+	(No symbol) [0x00282A28]
+	(No symbol) [0x00282BC5]
+	(No symbol) [0x00275820]
+	BaseThreadInitThunk [0x76C667F9+25]
+	RtlGetFullPathName_UEx [0x77567F6D+173]
+	RtlGetFullPathName_UEx [0x77567F3B+123]
+	(No symbol) [0x00000000]
+
