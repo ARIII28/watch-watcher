@@ -1659,3 +1659,16 @@ Stacktrace:
 	RtlGetFullPathName_UEx [0x77907F6D+173]
 	RtlGetFullPathName_UEx [0x77907F3B+123]
 
+2024-12-23 01:20:49,152 - INFO - ====== WebDriver manager ======
+2024-12-23 01:20:49,855 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-23 01:20:49,887 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-23 01:20:49,918 - INFO - There is no [win64] chromedriver "131.0.6778.204" for browser google-chrome "131.0.6778" in cache
+2024-12-23 01:20:49,918 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-23 01:20:49,949 - INFO - WebDriver version 131.0.6778.204 selected
+2024-12-23 01:20:49,949 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.204/win32/chromedriver-win32.zip
+2024-12-23 01:20:49,949 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.204/win32/chromedriver-win32.zip
+2024-12-23 01:20:50,105 - INFO - Driver downloading response is 200
+2024-12-23 01:20:50,168 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-23 01:20:50,278 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\131.0.6778.204]
+2024-12-23 01:24:07,834 - ERROR - Error: HTTPConnectionPool(host='localhost', port=51161): Read timed out. (read timeout=120)
+2024-12-23 01:26:07,836 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=51161): Read timed out. (read timeout=120)")': /session/0d69933aa2380a51755962a54fe95f30
