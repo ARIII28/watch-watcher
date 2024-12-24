@@ -1672,3 +1672,39 @@ Stacktrace:
 2024-12-23 01:20:50,278 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\131.0.6778.204]
 2024-12-23 01:24:07,834 - ERROR - Error: HTTPConnectionPool(host='localhost', port=51161): Read timed out. (read timeout=120)
 2024-12-23 01:26:07,836 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=51161): Read timed out. (read timeout=120)")': /session/0d69933aa2380a51755962a54fe95f30
+2024-12-24 01:19:01,077 - INFO - ====== WebDriver manager ======
+2024-12-24 01:19:01,890 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-24 01:19:01,936 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-24 01:19:01,983 - INFO - There is no [win64] chromedriver "131.0.6778.204" for browser google-chrome "131.0.6778" in cache
+2024-12-24 01:19:01,983 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-24 01:19:02,093 - INFO - WebDriver version 131.0.6778.204 selected
+2024-12-24 01:19:02,093 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.204/win32/chromedriver-win32.zip
+2024-12-24 01:19:02,093 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.204/win32/chromedriver-win32.zip
+2024-12-24 01:19:02,281 - INFO - Driver downloading response is 200
+2024-12-24 01:19:02,531 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-24 01:19:02,671 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\131.0.6778.204]
+2024-12-24 01:19:51,095 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0117EC13+23731]
+	(No symbol) [0x0110C394]
+	(No symbol) [0x00FEBE63]
+	(No symbol) [0x0102FCE6]
+	(No symbol) [0x0102FF2B]
+	(No symbol) [0x0106D892]
+	(No symbol) [0x01051EA4]
+	(No symbol) [0x0106B46E]
+	(No symbol) [0x01051BF6]
+	(No symbol) [0x01023F35]
+	(No symbol) [0x01024EBD]
+	GetHandleVerifier [0x0145F0D3+3039603]
+	GetHandleVerifier [0x01472DEA+3120778]
+	GetHandleVerifier [0x0146B592+3089970]
+	GetHandleVerifier [0x012143B0+635984]
+	(No symbol) [0x01114DCD]
+	(No symbol) [0x01112068]
+	(No symbol) [0x01112205]
+	(No symbol) [0x01104FD0]
+	BaseThreadInitThunk [0x778467F9+25]
+	RtlGetFullPathName_UEx [0x77DB7F6D+173]
+	RtlGetFullPathName_UEx [0x77DB7F3B+123]
+
