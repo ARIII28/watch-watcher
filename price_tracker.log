@@ -4822,3 +4822,40 @@ Stacktrace:
 	RtlGetFullPathName_UEx [0x77997F4D+173]
 	RtlGetFullPathName_UEx [0x77997F1B+123]
 
+2025-03-22 01:22:24,830 - INFO - ====== WebDriver manager ======
+2025-03-22 01:22:25,534 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-22 01:22:25,566 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-22 01:22:25,566 - INFO - There is no [win64] chromedriver "134.0.6998.165" for browser google-chrome "134.0.6998" in cache
+2025-03-22 01:22:25,566 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-22 01:22:25,613 - INFO - WebDriver version 134.0.6998.165 selected
+2025-03-22 01:22:25,613 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.165/win32/chromedriver-win32.zip
+2025-03-22 01:22:25,613 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.165/win32/chromedriver-win32.zip
+2025-03-22 01:22:25,769 - INFO - Driver downloading response is 200
+2025-03-22 01:22:25,832 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-22 01:22:25,957 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\134.0.6998.165]
+2025-03-22 01:23:11,023 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x002CC7F3+24435]
+	(No symbol) [0x00252074]
+	(No symbol) [0x001206E3]
+	(No symbol) [0x00168B39]
+	(No symbol) [0x00168E8B]
+	(No symbol) [0x001B1AC2]
+	(No symbol) [0x0018D804]
+	(No symbol) [0x001AF20A]
+	(No symbol) [0x0018D5B6]
+	(No symbol) [0x0015C54F]
+	(No symbol) [0x0015D894]
+	GetHandleVerifier [0x005D70A3+3213347]
+	GetHandleVerifier [0x005EB0C9+3295305]
+	GetHandleVerifier [0x005E558C+3271948]
+	GetHandleVerifier [0x00367360+658144]
+	(No symbol) [0x0025B27D]
+	(No symbol) [0x00258208]
+	(No symbol) [0x002583A9]
+	(No symbol) [0x0024AAC0]
+	BaseThreadInitThunk [0x761367F9+25]
+	RtlGetFullPathName_UEx [0x77367F4D+173]
+	RtlGetFullPathName_UEx [0x77367F1B+123]
+	(No symbol) [0x00000000]
+
