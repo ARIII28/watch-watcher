@@ -6950,3 +6950,39 @@ Stacktrace:
 	RtlGetFullPathName_UEx [0x77047F4D+173]
 	RtlGetFullPathName_UEx [0x77047F1B+123]
 
+2025-05-20 01:40:32,207 - INFO - ====== WebDriver manager ======
+2025-05-20 01:40:33,082 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-20 01:40:33,176 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-20 01:40:33,239 - INFO - There is no [win64] chromedriver "136.0.7103.94" for browser google-chrome "136.0.7103" in cache
+2025-05-20 01:40:33,239 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-20 01:40:33,379 - INFO - WebDriver version 136.0.7103.94 selected
+2025-05-20 01:40:33,395 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-20 01:40:33,395 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-20 01:40:33,599 - INFO - Driver downloading response is 200
+2025-05-20 01:40:33,864 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-20 01:40:34,021 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\136.0.7103.94]
+2025-05-20 01:41:33,803 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0117FC83+61635]
+	GetHandleVerifier [0x0117FCC4+61700]
+	(No symbol) [0x00FA05D3]
+	(No symbol) [0x00FE899E]
+	(No symbol) [0x00FE8D3B]
+	(No symbol) [0x01030E12]
+	(No symbol) [0x0100D2E4]
+	(No symbol) [0x0102E61B]
+	(No symbol) [0x0100D096]
+	(No symbol) [0x00FDC840]
+	(No symbol) [0x00FDD6A4]
+	GetHandleVerifier [0x014045A3+2701795]
+	GetHandleVerifier [0x013FFD26+2683238]
+	GetHandleVerifier [0x0141AA6E+2793134]
+	GetHandleVerifier [0x01196945+155013]
+	GetHandleVerifier [0x0119D02D+181357]
+	GetHandleVerifier [0x011874D8+92440]
+	GetHandleVerifier [0x01187680+92864]
+	GetHandleVerifier [0x01172070+5296]
+	BaseThreadInitThunk [0x773D67F9+25]
+	RtlGetFullPathName_UEx [0x77A17F4D+173]
+	RtlGetFullPathName_UEx [0x77A17F1B+123]
+
