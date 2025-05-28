@@ -7240,3 +7240,39 @@ Stacktrace:
 	RtlGetFullPathName_UEx [0x77B97F1B+123]
 	(No symbol) [0x00000000]
 
+2025-05-28 01:40:04,494 - INFO - ====== WebDriver manager ======
+2025-05-28 01:40:05,246 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 01:40:05,339 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 01:40:05,386 - INFO - There is no [win64] chromedriver "136.0.7103.113" for browser google-chrome "136.0.7103" in cache
+2025-05-28 01:40:05,386 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 01:40:05,543 - INFO - WebDriver version 136.0.7103.113 selected
+2025-05-28 01:40:05,543 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.113/win32/chromedriver-win32.zip
+2025-05-28 01:40:05,543 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.113/win32/chromedriver-win32.zip
+2025-05-28 01:40:05,699 - INFO - Driver downloading response is 200
+2025-05-28 01:40:05,980 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 01:40:06,137 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\136.0.7103.113]
+2025-05-28 01:41:09,603 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0098FC03+61635]
+	GetHandleVerifier [0x0098FC44+61700]
+	(No symbol) [0x007B05D3]
+	(No symbol) [0x007F899E]
+	(No symbol) [0x007F8D3B]
+	(No symbol) [0x00840E12]
+	(No symbol) [0x0081D2E4]
+	(No symbol) [0x0083E61B]
+	(No symbol) [0x0081D096]
+	(No symbol) [0x007EC840]
+	(No symbol) [0x007ED6A4]
+	GetHandleVerifier [0x00C14523+2701795]
+	GetHandleVerifier [0x00C0FCA6+2683238]
+	GetHandleVerifier [0x00C2A9EE+2793134]
+	GetHandleVerifier [0x009A68C5+155013]
+	GetHandleVerifier [0x009ACFAD+181357]
+	GetHandleVerifier [0x00997458+92440]
+	GetHandleVerifier [0x00997600+92864]
+	GetHandleVerifier [0x00981FF0+5296]
+	BaseThreadInitThunk [0x760C67F9+25]
+	RtlGetFullPathName_UEx [0x77487F4D+173]
+	RtlGetFullPathName_UEx [0x77487F1B+123]
+
