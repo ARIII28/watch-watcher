@@ -7349,3 +7349,39 @@ Stacktrace:
 	RtlGetFullPathName_UEx [0x777D7F4D+173]
 	RtlGetFullPathName_UEx [0x777D7F1B+123]
 
+2025-05-31 01:37:17,153 - INFO - ====== WebDriver manager ======
+2025-05-31 01:37:17,873 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-31 01:37:17,904 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-31 01:37:17,920 - INFO - There is no [win64] chromedriver "137.0.7151.55" for browser google-chrome "137.0.7151" in cache
+2025-05-31 01:37:17,920 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-31 01:37:17,966 - INFO - WebDriver version 137.0.7151.55 selected
+2025-05-31 01:37:17,966 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/137.0.7151.55/win32/chromedriver-win32.zip
+2025-05-31 01:37:17,966 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/137.0.7151.55/win32/chromedriver-win32.zip
+2025-05-31 01:37:18,123 - INFO - Driver downloading response is 200
+2025-05-31 01:37:18,170 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-31 01:37:18,310 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\137.0.7151.55]
+2025-05-31 01:38:23,866 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x44f173+62931]
+	GetHandleVerifier [0x0x44f1b4+62996]
+	(No symbol) [0x0x261053]
+	(No symbol) [0x0x2a97ae]
+	(No symbol) [0x0x2a9b4b]
+	(No symbol) [0x0x2f21f2]
+	(No symbol) [0x0x2ce4f4]
+	(No symbol) [0x0x2ef9e3]
+	(No symbol) [0x0x2ce2a6]
+	(No symbol) [0x0x29d5f0]
+	(No symbol) [0x0x29e464]
+	GetHandleVerifier [0x0x6a3463+2504899]
+	GetHandleVerifier [0x0x69e892+2485490]
+	GetHandleVerifier [0x0x47590a+220522]
+	GetHandleVerifier [0x0x466388+157672]
+	GetHandleVerifier [0x0x46cb6d+184269]
+	GetHandleVerifier [0x0x457158+95672]
+	GetHandleVerifier [0x0x457300+96096]
+	GetHandleVerifier [0x0x4421aa+9738]
+	BaseThreadInitThunk [0x0x75fb67f9+25]
+	RtlGetFullPathName_UEx [0x0x77607f4d+173]
+	RtlGetFullPathName_UEx [0x0x77607f1b+123]
+
