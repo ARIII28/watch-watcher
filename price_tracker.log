@@ -9187,3 +9187,39 @@ Stacktrace:
 	RtlGetFullPathName_UEx [0x0x77957f1b+123]
 	(No symbol) [0x0]
 
+2025-07-21 01:54:01,902 - INFO - ====== WebDriver manager ======
+2025-07-21 01:54:02,653 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-21 01:54:02,746 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-21 01:54:02,815 - INFO - There is no [win64] chromedriver "138.0.7204.157" for browser google-chrome "138.0.7204" in cache
+2025-07-21 01:54:02,815 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-21 01:54:02,997 - INFO - WebDriver version 138.0.7204.157 selected
+2025-07-21 01:54:02,997 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.157/win32/chromedriver-win32.zip
+2025-07-21 01:54:02,997 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.157/win32/chromedriver-win32.zip
+2025-07-21 01:54:03,090 - INFO - Driver downloading response is 200
+2025-07-21 01:54:03,388 - INFO - Get LATEST chromedriver version for google-chrome
+2025-07-21 01:54:03,544 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\138.0.7204.157]
+2025-07-21 01:54:31,383 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7f1a33+62339]
+	GetHandleVerifier [0x0x7f1a74+62404]
+	(No symbol) [0x0x632123]
+	(No symbol) [0x0x67a86e]
+	(No symbol) [0x0x67ac0b]
+	(No symbol) [0x0x6c2f72]
+	(No symbol) [0x0x69f404]
+	(No symbol) [0x0x6c07a3]
+	(No symbol) [0x0x69f1b6]
+	(No symbol) [0x0x66e7a2]
+	(No symbol) [0x0x66f644]
+	GetHandleVerifier [0x0xa665c3+2637587]
+	GetHandleVerifier [0x0xa619ca+2618138]
+	GetHandleVerifier [0x0x8184aa+220666]
+	GetHandleVerifier [0x0x8088d8+156200]
+	GetHandleVerifier [0x0x80f06d+182717]
+	GetHandleVerifier [0x0x7f9978+94920]
+	GetHandleVerifier [0x0x7f9b02+95314]
+	GetHandleVerifier [0x0x7e4c4a+9626]
+	BaseThreadInitThunk [0x0x76aa67f9+25]
+	RtlGetFullPathName_UEx [0x0x77627f4d+173]
+	RtlGetFullPathName_UEx [0x0x77627f1b+123]
+
