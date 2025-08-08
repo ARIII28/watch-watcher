@@ -9836,3 +9836,39 @@ Stacktrace:
 	RtlGetFullPathName_UEx [0x0x77c77f4d+173]
 	RtlGetFullPathName_UEx [0x0x77c77f1b+123]
 
+2025-08-08 01:51:59,504 - INFO - ====== WebDriver manager ======
+2025-08-08 01:52:00,223 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-08 01:52:00,286 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-08 01:52:00,301 - INFO - There is no [win64] chromedriver "138.0.7204.183" for browser google-chrome "138.0.7204" in cache
+2025-08-08 01:52:00,301 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-08 01:52:00,364 - INFO - WebDriver version 138.0.7204.183 selected
+2025-08-08 01:52:00,380 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.183/win32/chromedriver-win32.zip
+2025-08-08 01:52:00,380 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.183/win32/chromedriver-win32.zip
+2025-08-08 01:52:00,489 - INFO - Driver downloading response is 200
+2025-08-08 01:52:00,598 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-08 01:52:00,708 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\138.0.7204.183]
+2025-08-08 01:52:46,062 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xcaba83+63395]
+	GetHandleVerifier [0x0xcabac4+63460]
+	(No symbol) [0x0xaf2113]
+	(No symbol) [0x0xb3a85e]
+	(No symbol) [0x0xb3abfb]
+	(No symbol) [0x0xb82f92]
+	(No symbol) [0x0xb5f3f4]
+	(No symbol) [0x0xb807ba]
+	(No symbol) [0x0xb5f1a6]
+	(No symbol) [0x0xb2e7b2]
+	(No symbol) [0x0xb2f654]
+	GetHandleVerifier [0x0xf28883+2672035]
+	GetHandleVerifier [0x0xf23cba+2652634]
+	GetHandleVerifier [0x0xcd2bca+223466]
+	GetHandleVerifier [0x0xcc2cb8+158168]
+	GetHandleVerifier [0x0xcc978d+185517]
+	GetHandleVerifier [0x0xcb3b78+96408]
+	GetHandleVerifier [0x0xcb3d02+96802]
+	GetHandleVerifier [0x0xc9e90a+9770]
+	BaseThreadInitThunk [0x0x75e967f9+25]
+	RtlGetFullPathName_UEx [0x0x77427f4d+173]
+	RtlGetFullPathName_UEx [0x0x77427f1b+123]
+
