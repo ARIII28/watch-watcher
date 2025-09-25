@@ -11565,3 +11565,39 @@ Stacktrace:
 	RtlInitializeExceptionChain [0x0x76f3d2fb+107]
 	RtlGetAppContainerNamedObjectPath [0x0x76f3d281+561]
 
+2025-09-25 01:25:10,563 - INFO - ====== WebDriver manager ======
+2025-09-25 01:25:11,420 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-25 01:25:11,477 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-25 01:25:11,508 - INFO - There is no [win64] chromedriver "140.0.7339.207" for browser google-chrome "140.0.7339" in cache
+2025-09-25 01:25:11,508 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-25 01:25:11,582 - INFO - WebDriver version 140.0.7339.207 selected
+2025-09-25 01:25:11,586 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/140.0.7339.207/win32/chromedriver-win32.zip
+2025-09-25 01:25:11,586 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/140.0.7339.207/win32/chromedriver-win32.zip
+2025-09-25 01:25:11,687 - INFO - Driver downloading response is 200
+2025-09-25 01:25:11,761 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-25 01:25:11,896 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\140.0.7339.207]
+2025-09-25 01:26:09,637 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x10ec333+65459]
+	GetHandleVerifier [0x0x10ec374+65524]
+	(No symbol) [0x0xf0d973]
+	(No symbol) [0x0xf576e7]
+	(No symbol) [0x0xf57a8b]
+	(No symbol) [0x0xf9dea2]
+	(No symbol) [0x0xf79e44]
+	(No symbol) [0x0xf9b606]
+	(No symbol) [0x0xf79bf6]
+	(No symbol) [0x0xf4b38e]
+	(No symbol) [0x0xf4c274]
+	GetHandleVerifier [0x0x136eda3+2697763]
+	GetHandleVerifier [0x0x1369ec7+2677575]
+	GetHandleVerifier [0x0x1114194+228884]
+	GetHandleVerifier [0x0x11049f8+165496]
+	GetHandleVerifier [0x0x110b18d+192013]
+	GetHandleVerifier [0x0x10f47d8+99416]
+	GetHandleVerifier [0x0x10f4972+99826]
+	GetHandleVerifier [0x0x10debea+10346]
+	BaseThreadInitThunk [0x0x757a5d49+25]
+	RtlInitializeExceptionChain [0x0x7724d6db+107]
+	RtlGetAppContainerNamedObjectPath [0x0x7724d661+561]
+
