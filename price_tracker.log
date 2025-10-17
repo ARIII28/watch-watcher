@@ -12357,3 +12357,39 @@ Stacktrace:
 	RtlInitializeExceptionChain [0x0x77e8d6db+107]
 	RtlGetAppContainerNamedObjectPath [0x0x77e8d661+561]
 
+2025-10-17 01:26:11,330 - INFO - ====== WebDriver manager ======
+2025-10-17 01:26:12,185 - INFO - Get LATEST chromedriver version for google-chrome
+2025-10-17 01:26:12,242 - INFO - Get LATEST chromedriver version for google-chrome
+2025-10-17 01:26:12,282 - INFO - There is no [win64] chromedriver "141.0.7390.78" for browser google-chrome "141.0.7390" in cache
+2025-10-17 01:26:12,282 - INFO - Get LATEST chromedriver version for google-chrome
+2025-10-17 01:26:12,381 - INFO - WebDriver version 141.0.7390.78 selected
+2025-10-17 01:26:12,389 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/141.0.7390.78/win32/chromedriver-win32.zip
+2025-10-17 01:26:12,389 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/141.0.7390.78/win32/chromedriver-win32.zip
+2025-10-17 01:26:12,582 - INFO - Driver downloading response is 200
+2025-10-17 01:26:12,635 - INFO - Get LATEST chromedriver version for google-chrome
+2025-10-17 01:26:12,770 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\141.0.7390.78]
+2025-10-17 01:27:22,344 - ERROR - Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xadfe83+66515]
+	GetHandleVerifier [0x0xadfec4+66580]
+	(No symbol) [0x0x8cdc48]
+	(No symbol) [0x0x918704]
+	(No symbol) [0x0x918aab]
+	(No symbol) [0x0x95f482]
+	(No symbol) [0x0x93b214]
+	(No symbol) [0x0x95cba7]
+	(No symbol) [0x0x93afc6]
+	(No symbol) [0x0x90c2ca]
+	(No symbol) [0x0x90d154]
+	GetHandleVerifier [0x0xd373b3+2521347]
+	GetHandleVerifier [0x0xd32333+2500739]
+	GetHandleVerifier [0x0xb07cd4+229924]
+	GetHandleVerifier [0x0xaf8238+165768]
+	GetHandleVerifier [0x0xafeced+193085]
+	GetHandleVerifier [0x0xae8198+100072]
+	GetHandleVerifier [0x0xae8330+100480]
+	GetHandleVerifier [0x0xad25ea+11066]
+	BaseThreadInitThunk [0x0x760c5d49+25]
+	RtlInitializeExceptionChain [0x0x775cd6db+107]
+	RtlGetAppContainerNamedObjectPath [0x0x775cd661+561]
+
