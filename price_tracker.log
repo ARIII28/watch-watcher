@@ -12573,3 +12573,16 @@ Stacktrace:
 	RtlInitializeExceptionChain [0x0x76ebd6db+107]
 	RtlGetAppContainerNamedObjectPath [0x0x76ebd661+561]
 
+2025-10-23 01:28:09,466 - INFO - ====== WebDriver manager ======
+2025-10-23 01:28:10,391 - INFO - Get LATEST chromedriver version for google-chrome
+2025-10-23 01:28:10,496 - INFO - Get LATEST chromedriver version for google-chrome
+2025-10-23 01:28:10,556 - INFO - There is no [win64] chromedriver "141.0.7390.122" for browser google-chrome "141.0.7390" in cache
+2025-10-23 01:28:10,556 - INFO - Get LATEST chromedriver version for google-chrome
+2025-10-23 01:28:10,730 - INFO - WebDriver version 141.0.7390.122 selected
+2025-10-23 01:28:10,734 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/141.0.7390.122/win32/chromedriver-win32.zip
+2025-10-23 01:28:10,734 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/141.0.7390.122/win32/chromedriver-win32.zip
+2025-10-23 01:28:10,902 - INFO - Driver downloading response is 200
+2025-10-23 01:28:11,153 - INFO - Get LATEST chromedriver version for google-chrome
+2025-10-23 01:28:11,336 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\141.0.7390.122]
+2025-10-23 01:28:48,843 - INFO - Extracted: CASIO, \u20b99195, 2025-10-23 01:28:48
+2025-10-23 01:28:48,843 - INFO - Logged to CSV: CASIO, \u20b99195, 2025-10-23 01:28:48
