@@ -17569,3 +17569,40 @@ Symbols not available. Dumping unresolved backtrace:
 2026-03-10 02:04:15,680 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\145.0.7632.117]
 2026-03-10 02:04:42,198 - INFO - Extracted: CASIO, \u20b99195, 2026-03-10 02:04:42
 2026-03-10 02:04:42,198 - INFO - Logged to CSV: CASIO, \u20b99195, 2026-03-10 02:04:42
+2026-03-11 02:03:52,895 - INFO - ====== WebDriver manager ======
+2026-03-11 02:03:53,633 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-11 02:03:53,669 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-11 02:03:53,698 - INFO - There is no [win64] chromedriver "145.0.7632.117" for browser google-chrome "145.0.7632" in cache
+2026-03-11 02:03:53,698 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-11 02:03:53,771 - INFO - WebDriver version 145.0.7632.117 selected
+2026-03-11 02:03:53,776 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/win32/chromedriver-win32.zip
+2026-03-11 02:03:53,776 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/win32/chromedriver-win32.zip
+2026-03-11 02:03:53,833 - INFO - Driver downloading response is 200
+2026-03-11 02:03:53,897 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-11 02:03:54,105 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\145.0.7632.117]
+2026-03-11 02:04:20,154 - ERROR - Error: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xf47dd3
+	0xf47e14
+	0xd51db0
+	0xd9c20a
+	0xd9c4ab
+	0xddde32
+	0xdbea84
+	0xddb621
+	0xdbe7d6
+	0xd90049
+	0xd90e04
+	0x11a6924
+	0x11a1bf7
+	0x11bf5a0
+	0xf60f58
+	0xf6891d
+	0xf50648
+	0xf50812
+	0xf3a21a
+	0x76445d49
+	0x7792d7ab
+	0x7792d731
+
