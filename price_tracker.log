@@ -17791,3 +17791,40 @@ Symbols not available. Dumping unresolved backtrace:
 	0x777dd7ab
 	0x777dd731
 
+2026-03-17 02:10:24,829 - INFO - ====== WebDriver manager ======
+2026-03-17 02:10:25,569 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-17 02:10:25,698 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-17 02:10:25,721 - INFO - There is no [win64] chromedriver "145.0.7632.117" for browser google-chrome "145.0.7632" in cache
+2026-03-17 02:10:25,721 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-17 02:10:25,818 - INFO - WebDriver version 145.0.7632.117 selected
+2026-03-17 02:10:25,824 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/win32/chromedriver-win32.zip
+2026-03-17 02:10:25,824 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.117/win32/chromedriver-win32.zip
+2026-03-17 02:10:25,916 - INFO - Driver downloading response is 200
+2026-03-17 02:10:25,969 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-17 02:10:26,191 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\145.0.7632.117]
+2026-03-17 02:11:05,539 - ERROR - Error: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xf17dd3
+	0xf17e14
+	0xd21db0
+	0xd6c20a
+	0xd6c4ab
+	0xdade32
+	0xd8ea84
+	0xdab621
+	0xd8e7d6
+	0xd60049
+	0xd60e04
+	0x1176924
+	0x1171bf7
+	0x118f5a0
+	0xf30f58
+	0xf3891d
+	0xf20648
+	0xf20812
+	0xf0a21a
+	0x75d55d49
+	0x7740d7ab
+	0x7740d731
+
