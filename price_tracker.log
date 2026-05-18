@@ -20034,3 +20034,35 @@ Stacktrace:
 	ntdll!RtlInitializeExceptionChain [0x77bad7ab+6b]
 	ntdll!RtlGetAppContainerNamedObjectPath [0x77bad731+231]
 
+2026-05-18 03:44:51,296 - INFO - ====== WebDriver manager ======
+2026-05-18 03:44:52,871 - INFO - Get LATEST chromedriver version for google-chrome
+2026-05-18 03:44:52,920 - INFO - There is no [win64] chromedriver "148.0.7778.167" for browser google-chrome "148.0.7778" in cache
+2026-05-18 03:44:53,331 - INFO - There is no [win64] chromedriver "148.0.7778.167" for browser google-chrome "148.0.7778" in cache
+2026-05-18 03:44:53,331 - INFO - Get LATEST chromedriver version for google-chrome
+2026-05-18 03:44:53,441 - INFO - WebDriver version 148.0.7778.167 selected
+2026-05-18 03:44:53,446 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/148.0.7778.167/win64/chromedriver-win64.zip
+2026-05-18 03:44:53,446 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/148.0.7778.167/win64/chromedriver-win64.zip
+2026-05-18 03:44:53,672 - INFO - Driver downloading response is 200
+2026-05-18 03:44:53,876 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\148.0.7778.167]
+2026-05-18 03:45:23,023 - ERROR - Error: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7d5f61e35+2e8d45]
+	chromedriver!GetHandleVerifier [0x7ff7d5c8e6c0+155d0]
+	chromedriver!(No symbol) [0x7ff7d59dd57d]
+	chromedriver!(No symbol) [0x7ff7d5a3767e]
+	chromedriver!(No symbol) [0x7ff7d5a3798c]
+	chromedriver!(No symbol) [0x7ff7d5a880c7]
+	chromedriver!(No symbol) [0x7ff7d5a84c63]
+	chromedriver!(No symbol) [0x7ff7d5a29d58]
+	chromedriver!(No symbol) [0x7ff7d5a2ac43]
+	chromedriver!GetHandleVerifier [0x7ff7d5f8dab9+3149c9]
+	chromedriver!GetHandleVerifier [0x7ff7d5f8802b+30ef3b]
+	chromedriver!GetHandleVerifier [0x7ff7d5fac872+333782]
+	chromedriver!GetHandleVerifier [0x7ff7d5cab785+32695]
+	chromedriver!GetHandleVerifier [0x7ff7d5cb42bc+3b1cc]
+	chromedriver!GetHandleVerifier [0x7ff7d5c97f24+1ee34]
+	chromedriver!GetHandleVerifier [0x7ff7d5c980b4+1efc4]
+	chromedriver!GetHandleVerifier [0x7ff7d5c7bf27+2e37]
+	KERNEL32!BaseThreadInitThunk [0x7fff8854e8d7+17]
+	ntdll!RtlUserThreadStart [0x7fff8952c53c+2c]
+
