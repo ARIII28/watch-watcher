@@ -24402,3 +24402,15 @@ Stacktrace:
 	KERNEL32!BaseThreadInitThunk [0x7ffe5340e987+17]
 	ntdll!RtlUserThreadStart [0x7ffe53aec53c+2c]
 
+2026-10-04 04:38:46,989 - INFO - ====== WebDriver manager ======
+2026-10-04 04:38:49,655 - INFO - Get LATEST chromedriver version for google-chrome
+2026-10-04 04:38:49,726 - INFO - There is no [win64] chromedriver "154.0.8037.92" for browser google-chrome "154.0.8037" in cache
+2026-10-04 04:38:50,039 - INFO - There is no [win64] chromedriver "154.0.8037.92" for browser google-chrome "154.0.8037" in cache
+2026-10-04 04:38:50,039 - INFO - Get LATEST chromedriver version for google-chrome
+2026-10-04 04:38:50,186 - INFO - WebDriver version 154.0.8037.92 selected
+2026-10-04 04:38:50,193 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/154.0.8037.92/win64/chromedriver-win64.zip
+2026-10-04 04:38:50,193 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/154.0.8037.92/win64/chromedriver-win64.zip
+2026-10-04 04:38:50,343 - INFO - Driver downloading response is 200
+2026-10-04 04:38:50,645 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\154.0.8037.92]
+2026-10-04 04:39:06,146 - INFO - Extracted: CASIO, \u20b99195, 2026-10-04 04:39:06
+2026-10-04 04:39:06,147 - INFO - Logged to CSV: CASIO, \u20b99195, 2026-10-04 04:39:06
