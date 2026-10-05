@@ -24414,3 +24414,35 @@ Stacktrace:
 2026-10-04 04:38:50,645 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\154.0.8037.92]
 2026-10-04 04:39:06,146 - INFO - Extracted: CASIO, \u20b99195, 2026-10-04 04:39:06
 2026-10-04 04:39:06,147 - INFO - Logged to CSV: CASIO, \u20b99195, 2026-10-04 04:39:06
+2026-10-05 04:25:32,409 - INFO - ====== WebDriver manager ======
+2026-10-05 04:25:35,238 - INFO - Get LATEST chromedriver version for google-chrome
+2026-10-05 04:25:35,316 - INFO - There is no [win64] chromedriver "154.0.8037.92" for browser google-chrome "154.0.8037" in cache
+2026-10-05 04:25:35,705 - INFO - There is no [win64] chromedriver "154.0.8037.92" for browser google-chrome "154.0.8037" in cache
+2026-10-05 04:25:35,705 - INFO - Get LATEST chromedriver version for google-chrome
+2026-10-05 04:25:35,918 - INFO - WebDriver version 154.0.8037.92 selected
+2026-10-05 04:25:35,926 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/154.0.8037.92/win64/chromedriver-win64.zip
+2026-10-05 04:25:35,926 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/154.0.8037.92/win64/chromedriver-win64.zip
+2026-10-05 04:25:36,031 - INFO - Driver downloading response is 200
+2026-10-05 04:25:36,296 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\154.0.8037.92]
+2026-10-05 04:26:03,113 - ERROR - Error: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff645a69d55+5a55]
+	chromedriver!(No symbol) [0x7ff64598f540]
+	chromedriver!(No symbol) [0x7ff6457b45fd]
+	chromedriver!(No symbol) [0x7ff64580fca1]
+	chromedriver!(No symbol) [0x7ff64580ff6c]
+	chromedriver!(No symbol) [0x7ff645863077]
+	chromedriver!(No symbol) [0x7ff64585fcd9]
+	chromedriver!(No symbol) [0x7ff645801a12]
+	chromedriver!(No symbol) [0x7ff645802823]
+	chromedriver!GetHandleVerifier [0x7ff645e804b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff645eae26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff645ea274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff645b632fe+feffe]
+	chromedriver!(No symbol) [0x7ff64599cb55]
+	chromedriver!(No symbol) [0x7ff645997f64]
+	chromedriver!(No symbol) [0x7ff6459980f4]
+	chromedriver!(No symbol) [0x7ff645982e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ffc2a1fe987+17]
+	ntdll!RtlUserThreadStart [0x7ffc2a56c53c+2c]
+
