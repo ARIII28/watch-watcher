@@ -24542,3 +24542,35 @@ Stacktrace:
 	KERNEL32!BaseThreadInitThunk [0x7ffe7a66e987+17]
 	ntdll!RtlUserThreadStart [0x7ffe7c72c53c+2c]
 
+2026-10-09 04:53:54,113 - INFO - ====== WebDriver manager ======
+2026-10-09 04:53:57,679 - INFO - Get LATEST chromedriver version for google-chrome
+2026-10-09 04:53:57,737 - INFO - There is no [win64] chromedriver "154.0.8037.92" for browser google-chrome "154.0.8037" in cache
+2026-10-09 04:53:58,126 - INFO - There is no [win64] chromedriver "154.0.8037.92" for browser google-chrome "154.0.8037" in cache
+2026-10-09 04:53:58,126 - INFO - Get LATEST chromedriver version for google-chrome
+2026-10-09 04:53:58,228 - INFO - WebDriver version 154.0.8037.92 selected
+2026-10-09 04:53:58,235 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/154.0.8037.92/win64/chromedriver-win64.zip
+2026-10-09 04:53:58,235 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/154.0.8037.92/win64/chromedriver-win64.zip
+2026-10-09 04:53:59,025 - INFO - Driver downloading response is 200
+2026-10-09 04:53:59,910 - INFO - Driver has been saved in cache [C:\Users\runneradmin\.wdm\drivers\chromedriver\win64\154.0.8037.92]
+2026-10-09 04:54:36,790 - ERROR - Error: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6cb6d9d55+5a55]
+	chromedriver!(No symbol) [0x7ff6cb5ff540]
+	chromedriver!(No symbol) [0x7ff6cb4245fd]
+	chromedriver!(No symbol) [0x7ff6cb47fca1]
+	chromedriver!(No symbol) [0x7ff6cb47ff6c]
+	chromedriver!(No symbol) [0x7ff6cb4d3077]
+	chromedriver!(No symbol) [0x7ff6cb4cfcd9]
+	chromedriver!(No symbol) [0x7ff6cb471a12]
+	chromedriver!(No symbol) [0x7ff6cb472823]
+	chromedriver!GetHandleVerifier [0x7ff6cbaf04b1+41c1b1]
+	chromedriver!GetHandleVerifier [0x7ff6cbb1e26b+449f6b]
+	chromedriver!GetHandleVerifier [0x7ff6cbb1274e+43e44e]
+	chromedriver!GetHandleVerifier [0x7ff6cb7d32fe+feffe]
+	chromedriver!(No symbol) [0x7ff6cb60cb55]
+	chromedriver!(No symbol) [0x7ff6cb607f64]
+	chromedriver!(No symbol) [0x7ff6cb6080f4]
+	chromedriver!(No symbol) [0x7ff6cb5f2e4c]
+	KERNEL32!BaseThreadInitThunk [0x7ff86a2be987+17]
+	ntdll!RtlUserThreadStart [0x7ff86ba2c53c+2c]
+
